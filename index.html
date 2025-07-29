@@ -141,6 +141,19 @@
             <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900">Shwd Montana Itinerary </h1>
             <p class="text-2xl md:text-3xl text-indigo-600 mt-2 font-bold">Glacier Adventure </p>
             <p class="text-lg text-slate-500 mt-3">August 4 – 11, 2025</p>
+             <div class="mt-4 bg-white/50 p-4 rounded-lg shadow-inner flex items-center justify-center space-x-8 text-slate-600">
+                <div>
+                    <p class="font-bold">Local Time (MT)</p>
+                    <p id="local-time" class="text-lg font-semibold">--:--:-- --</p>
+                </div>
+                <div class="border-l border-slate-300 h-12"></div>
+                <div>
+                    <p class="font-bold">Glacier Nat'l Park Weather</p>
+                    <div id="weather-info" class="flex items-center justify-center space-x-2">
+                        <span class="text-lg font-semibold">Loading...</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-- Itinerary Days -->
@@ -185,7 +198,7 @@
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">1:30 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Hidden Lake Overlook Hike</h4><p class="text-gray-600 mt-1">A beautiful hike with rewarding views. Check the trail info for conditions.</p><a href="https://www.alltrails.com/trail/us/montana/hidden-lake-overlook" target="_blank" class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full hover:bg-indigo-200 mt-2">Trail Info</a></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">3:30 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Depart for <a href="https://www.google.com/maps/place/Apgar,+MT+59936/@48.527744,-114.0034742,15z/data=!3m1!4b1!4m6!3m5!1s0x5366175c8f136cfd:0x192a64fd191df9fb!8m2!3d48.527745!4d-113.9931745!16s%2Fm%2F04b4d28?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-indigo-600 hover:underline">Apgar Village</a></h4><p class="text-gray-600 mt-1">Time to head to the west side of Lake McDonald.</p></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">5:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Explore <a href="https://www.google.com/maps/place/Apgar,+MT+59936/@48.527744,-114.0034742,15z/data=!3m1!4b1!4m6!3m5!1s0x5366175c8f136cfd:0x192a64fd191df9fb!8m2!3d48.527745!4d-113.9931745!16s%2Fm%2F04b4d28?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-indigo-600 hover:underline">Apgar Village</a></h4><p class="text-gray-600 mt-1">Browse the shops, grab an ice cream, and enjoy the stunning lakeside views.</p></div>
-                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">7:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Lake+McDonald+Lodge" target="_blank" class="text-indigo-600 hover:underline font-medium">Lake McDonald Sunset Cruise & Dinner</a></h4><p class="text-gray-600 mt-1">Enjoy dinner on the water! Menu: Citrus salmon with a side of quinoa. Departs from Lake McDonald Lodge.</p><p class="text-gray-600 mt-1">Confirmation #: JC070825181</p><img src="http://googleusercontent.com/file_content/1" alt="Reservation for Lake McDonald Cruise" class="mt-3 rounded-lg shadow-sm"></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">7:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Lake+McDonald+Lodge" target="_blank" class="text-indigo-600 hover:underline font-medium">Lake McDonald Sunset Cruise & Dinner</a></h4><p class="text-gray-600 mt-1">Enjoy dinner on the water! Menu: Citrus salmon with a side of quinoa. Departs from Lake McDonald Lodge.</p><button id="viewReservationBtn" class="mt-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800">View Reservation Details</button></div>
                         </div>
                     </div>
                 </div>
@@ -205,7 +218,7 @@
                         <div class="relative border-t border-gray-200 pt-8">
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">9:30 AM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/place/Avalanche+Lake+Trailhead/@48.6764615,-113.8163497,17z/data=!3m1!4b1!4m6!3m5!1s0x5368a80cd6ea1b95:0xd9ec6a8be5638ad2!8m2!3d48.6764615!4d-113.8137748!16s%2Fg%2F11cs3n_8vp?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-indigo-600 hover:underline font-medium">Depart for Avalanche Lake</a></h4><p class="text-gray-600 mt-1">Get ready for one of Glacier's most popular hikes.</p></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">12:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Avalanche Lake Hike</h4><p class="text-gray-600 mt-1">Enjoy the walk through the Trail of the Cedars and up to the stunning lake.</p><a href="https://www.alltrails.com/trail/us/montana/avalanche-lake--6" target="_blank" class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full hover:bg-indigo-200 mt-2">Trail Info</a></div>
-                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">4:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/place/Glacier+Outfitters/@48.5266726,-113.9966827,17z/data=!3m1!4b1!4m6!3m5!1s0x5366175cc17617fb:0x4ab816c78a12bb45!8m2!3d48.5266726!4d-113.9941078!16s%2Fg%2F1q648b7dx?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-indigo-600 hover:underline font-medium">Biking / 2 Bridges (2 hours)</a></h4><p class="text-gray-600 mt-1">A leisurely bike ride to stretch your legs after the hike. Bike rentals at Glacier Outfitters.</p></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">3:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/place/Glacier+Outfitters/@48.5266726,-113.9966827,17z/data=!3m1!4b1!4m6!3m5!1s0x5366175cc17617fb:0x4ab816c78a12bb45!8m2!3d48.5266726!4d-113.9941078!16s%2Fg%2F1q648b7dx?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-indigo-600 hover:underline font-medium">Biking / 2 Bridges</a></h4><p class="text-gray-600 mt-1">A leisurely bike ride to stretch your legs after the hike.</p><button id="viewBikingReservationBtn" class="mt-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800">View Reservation Details</button></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">6:30 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/place/Hungry+Horse+Dam/@48.3569429,-114.0475357,17z/data=!3m1!4b1!4m6!3m5!1s0x5366477c70000001:0x23b8f13b6830545f!8m2!3d48.3569429!4d-114.0449608!16zL20vMDJ6bWMy?entry=ttu" target="_blank" class="text-indigo-600 hover:underline font-medium">Visit Hungry Horse Dam</a></h4><p class="text-gray-600 mt-1">Marvel at the impressive engineering of one of the largest concrete arch dams in the US.</p><a href="https://www.usbr.gov/pn/hungryhorse/" target="_blank" class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full hover:bg-indigo-200 mt-2">Dam Info</a></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">7:30 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Dinner at the North Star Ranch</h4><p class="text-gray-600 mt-1">Rib steak with red wine reduction and a side of roasted asparagus.</p></div>
                         </div>
@@ -231,7 +244,7 @@
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">3:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Drive the Bison Range</h4><p class="text-gray-600 mt-1">Take the Prairie Drive and keep your eyes peeled for bison, elk, deer, and more! (Payment required on-site).</p></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">5:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Clouse+Bauer+Arena" target="_blank" class="text-indigo-600 hover:underline font-medium">Discover the Missoula County Fair</a></h4><p class="text-gray-600 mt-1">Experience a classic Montana county fair.</p></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">6:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Dinner at the Fair</h4><p class="text-gray-600 mt-1">Chicken veggie stir fry & seasoned rice.</p></div>
-                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">7:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Rodeo Time!</h4><p class="text-gray-600 mt-1">Get ready for some thrilling rodeo action!</p><a href="https://missoulafairgrounds.com/events" target="_blank" class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full hover:bg-indigo-200 mt-2">Event Info</a></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">7:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Rodeo Time!</h4><p class="text-gray-600 mt-1">Get ready for some thrilling rodeo action!</p><div class="mt-2 space-x-2"><a href="https://missoulafairgrounds.com/events" target="_blank" class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full hover:bg-indigo-200">Event Info</a><a href="https://www.etix.com/ticket/online/onlinereprint.jsp?userID=415715788&password=41912682&utm_source=confirmation&utm_medium=email&utm_campaign=etix-order-confirmation&partner_id=439" target="_blank" class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full hover:bg-indigo-200">View Tickets</a></div></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">9:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Depart to the North Star Ranch</h4><p class="text-gray-600 mt-1">Time to head back after an action-packed day.</p></div>
                         </div>
                     </div>
@@ -253,7 +266,7 @@
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">9:00 AM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=11900+US-2" target="_blank" class="text-indigo-600 hover:underline font-medium">Depart for River Rafting</a></h4><p class="text-gray-600 mt-1">Get ready for an adventure on the water.</p></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">10:00 AM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Private Boat Rafting Trip</h4><p class="text-gray-600 mt-1">Enjoy an exclusive trip down the river!</p></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">2:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Whitefish+MT" target="_blank" class="text-indigo-600 hover:underline font-medium">Explore Downtown Whitefish</a></h4><p class="text-gray-600 mt-1">Discover the charming shops, galleries, and cafes.</p></div>
-                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">4:00 PM & 5:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KT3RmRoPaWZTMbM6lWp2BoQ9&daddr=1380+Wisconsin+Ave,+Whitefish,+MT+59937" target="_blank" class="text-indigo-600 hover:underline font-medium">Spa Time at The Lodge at Whitefish Lake</a></h4><p class="text-gray-600 mt-1">Time for some pampering and relaxation.</p><ul class="list-disc list-inside mt-2 text-gray-600"><li>Spa Group #1: 4:00 PM</li><li>Spa Group #2: 5:00 PM</li></ul></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">4:00 PM & 5:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KT3RmRoPaWZTMbM6lWp2BoQ9&daddr=1380+Wisconsin+Ave,+Whitefish,+MT+59937" target="_blank" class="text-indigo-600 hover:underline font-medium">Spa Time at The Lodge at Whitefish Lake</a></h4><p class="text-gray-600 mt-1">Time for some pampering and relaxation.</p><button id="viewSpaReservationBtn" class="mt-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800">View Reservation Details</button></div>
                             <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">Optional</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/place/Base+Lodge/@48.4806363,-114.3528114,17z/data=!3m1!4b1!4m6!3m5!1s0x53666ea47fb7fbdb:0xb4b6b0e45817fce3!8m2!3d48.4806363!4d-114.3502365!16s%2Fg%2F11fnyppxhh?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-indigo-600 hover:underline font-medium">Whitefish Ski Resort Scenic Chairlift</a></h4><p class="text-gray-600 mt-1">Take a ride up for breathtaking views of the valley. No reservations needed, starts at the Base Lodge.</p></div>
                         </div>
                     </div>
@@ -271,10 +284,12 @@
                 </div>
                 <div class="day-content">
                     <div class="px-6 pb-8">
-                        <div class="border-t border-gray-200 pt-8">
-                            <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg mb-6"><h4 class="font-bold text-lg text-indigo-800">Choose Your Adventure!</h4><p class="text-indigo-700">Today you have a choice of activities.</p></div>
-                            <div class="mb-6 border-2 border-indigo-100 p-4 rounded-lg"><h4 class="font-bold text-lg text-slate-800 mb-4">Option 1: St. Mary & Three Falls Hike</h4><div class="relative"><div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">9:30 AM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Rising+Sun+Boat+Dock" target="_blank" class="text-indigo-600 hover:underline font-medium">Depart to Rising Sun</a></h4><p class="text-gray-600 mt-1">Important: Go <span class="font-bold">around</span> Glacier, not through it.</p></div><div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">1:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">St. Mary Boat Shuttle</h4><p class="text-gray-600 mt-1">Enjoy the views from the boat as you cross St. Mary Lake.</p></div><div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">1:45 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Three Falls Hike</h4><p class="text-gray-600 mt-1">A beautiful hike to see Baring Falls, St. Mary Falls, and Virginia Falls.</p></div><div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">5:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Sacred+Waters+Brewing+Company" target="_blank" class="text-indigo-600 hover:underline font-medium">Depart to Sacred Waters Brewery</a></h4><p class="text-gray-600 mt-1">Time for some local craft beer.</p></div><div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">7:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Live Music & Dinner</h4><p class="text-gray-600 mt-1">Enjoy live music at the brewery with a dinner of Baby Back Ribs.</p></div></div></div>
-                            <div class="border-2 border-gray-200 p-4 rounded-lg"><h4 class="font-bold text-lg text-gray-800 mb-4">Option 2: Your Choice!</h4><p class="text-gray-600">This is a great alternative for those who prefer a different pace. Perhaps a relaxing day, more exploring in Whitefish, or another activity you discovered during the week.</p></div>
+                        <div class="relative border-t border-gray-200 pt-8">
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">9:30 AM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Rising+Sun+Boat+Dock" target="_blank" class="text-indigo-600 hover:underline font-medium">Depart to Rising Sun</a></h4><p class="text-gray-600 mt-1">Important: Go <span class="font-bold">around</span> Glacier, not through it.</p></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">1:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">St. Mary Boat Shuttle</h4><p class="text-gray-600 mt-1">Enjoy the views from the boat as you cross St. Mary Lake.</p><button id="viewBoatReservationBtn" class="mt-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800">View Reservation Details</button></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">1:45 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Three Falls Hike</h4><p class="text-gray-600 mt-1">A beautiful hike to see Baring Falls, St. Mary Falls, and Virginia Falls.</p><a href="https://www.alltrails.com/trail/us/montana/st-mary-and-virginia-falls-trail" target="_blank" class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full hover:bg-indigo-200 mt-2">Trail Info</a></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">5:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800"><a href="https://www.google.com/maps/search/?api=1&query=Sacred+Waters+Brewing+Company" target="_blank" class="text-indigo-600 hover:underline font-medium">Depart to Sacred Waters Brewery</a></h4><p class="text-gray-600 mt-1">Time for some local craft beer.</p></div>
+                            <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-line"></div><p class="font-bold text-indigo-600">7:00 PM</p><h4 class="font-bold text-lg mt-1 text-slate-800">Live Music & Dinner</h4><p class="text-gray-600 mt-1">Enjoy live music at the brewery with a dinner of Baby Back Ribs.</p></div>
                         </div>
                     </div>
                 </div>
@@ -304,6 +319,142 @@
 
         </div>
     </div>
+
+    <!-- Cruise Reservation Modal -->
+    <div id="reservationModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
+        <div class="relative mx-auto p-5 border w-full max-w-md shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Reservation Details</h3>
+                <div class="mt-2 px-7 py-3 text-left">
+                    <div id="reservationDetails" class="text-sm text-gray-600 space-y-2">
+                        <p><span class="font-semibold">Confirmation #:</span> JC070825181</p>
+                        <p><span class="font-semibold">Name:</span> Schlam Elisheva</p>
+                        <p><span class="font-semibold">Total Fees:</span> $540.00</p>
+                        <hr class="my-2">
+                        <p class="font-bold">Tour 1</p>
+                        <p><span class="font-semibold">Location:</span> Lake McDonald</p>
+                        <p><span class="font-semibold">Date / Time:</span> 08/05/2025 7:00 p.m. - Scenic Tour</p>
+                        <p><span class="font-semibold">Passengers:</span> 8 Adults (ages 13 and up)</p>
+                        <p><span class="font-semibold">Price:</span> $216.00</p>
+                    </div>
+                </div>
+                <div class="items-center px-4 py-3 space-x-2">
+                    <button id="copyDetailsBtn" class="px-4 py-2 bg-indigo-500 text-white text-base font-medium rounded-md w-auto shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+                        Copy Details
+                    </button>
+                    <button id="closeModalBtn" class="px-4 py-2 bg-gray-200 text-gray-800 text-base font-medium rounded-md w-auto shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        Close
+                    </button>
+                </div>
+                 <div id="copy-success" class="text-sm text-green-600 mt-2 h-4"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Biking Reservation Modal -->
+    <div id="bikingReservationModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
+        <div class="relative mx-auto p-5 border w-full max-w-md shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Biking Reservation Details</h3>
+                <div class="mt-2 px-7 py-3 text-left">
+                    <div id="bikingReservationDetails" class="text-sm text-gray-600 space-y-2">
+                        <p><span class="font-semibold">Order #:</span> R-077407</p>
+                        <p><span class="font-semibold">Start:</span> 08/06/2025 03:00 PM</p>
+                        <p><span class="font-semibold">End:</span> 08/06/2025 07:00 PM</p>
+                        <hr class="my-2">
+                        <p class="font-bold">Included Items:</p>
+                        <ul class="list-disc list-inside">
+                            <li>Hybrid Bike Medium 5'4" - 5'11" (4)</li>
+                            <li>Hybrid Bike Large 5'7" - 6'2" (4)</li>
+                            <li>Repeat Group Guest (1)</li>
+                            <li>Damage Waiver (0%) (1)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="items-center px-4 py-3 space-x-2">
+                    <button id="copyBikingDetailsBtn" class="px-4 py-2 bg-indigo-500 text-white text-base font-medium rounded-md w-auto shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+                        Copy Details
+                    </button>
+                    <button id="closeBikingModalBtn" class="px-4 py-2 bg-gray-200 text-gray-800 text-base font-medium rounded-md w-auto shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        Close
+                    </button>
+                </div>
+                 <div id="copyBikingSuccess" class="text-sm text-green-600 mt-2 h-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spa Reservation Modal -->
+    <div id="spaReservationModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
+        <div class="relative mx-auto p-5 border w-full max-w-md shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Spa Appointments</h3>
+                <div class="mt-2 px-7 py-3 text-left">
+                    <div id="spaReservationDetails" class="text-sm text-gray-600 space-y-4">
+                        <div>
+                            <p class="font-bold">Group 1:</p>
+                            <ul class="list-disc list-inside">
+                                <li>4:00 PM, Rest Herbal Massage 50 min</li>
+                                <li>4:00 PM, Pure Results Facial</li>
+                                <li>4:00 PM, Leg and Foot Revival</li>
+                                <li>4:30 PM, Leg and Foot Revival</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-bold">Group 2:</p>
+                            <ul class="list-disc list-inside">
+                                <li>5:00 PM, Pure Results Facial</li>
+                                <li>5:00 PM, Rest Herbal Massage 50 min</li>
+                                <li>5:00 PM, Leg and Foot Revival</li>
+                                <li>5:30 PM, Leg and Foot Revival</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="items-center px-4 py-3 space-x-2">
+                    <button id="copySpaDetailsBtn" class="px-4 py-2 bg-indigo-500 text-white text-base font-medium rounded-md w-auto shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+                        Copy Details
+                    </button>
+                    <button id="closeSpaModalBtn" class="px-4 py-2 bg-gray-200 text-gray-800 text-base font-medium rounded-md w-auto shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        Close
+                    </button>
+                </div>
+                 <div id="copySpaSuccess" class="text-sm text-green-600 mt-2 h-4"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Boat Reservation Modal -->
+    <div id="boatReservationModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center">
+        <div class="relative mx-auto p-5 border w-full max-w-md shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Reservation Details</h3>
+                <div class="mt-2 px-7 py-3 text-left">
+                    <div id="boatReservationDetails" class="text-sm text-gray-600 space-y-2">
+                        <p><span class="font-semibold">Confirmation #:</span> JC070825181</p>
+                        <p><span class="font-semibold">Name:</span> Schlam Elisheva</p>
+                        <p><span class="font-semibold">Total Fees:</span> $540.00</p>
+                        <hr class="my-2">
+                        <p class="font-bold">Tour 2</p>
+                        <p><span class="font-semibold">Location:</span> St. Mary Lake at Rising Sun</p>
+                        <p><span class="font-semibold">Date / Time:</span> 08/10/2025 1:00 p.m. - Scenic Tour + Hike</p>
+                        <p><span class="font-semibold">Passengers:</span> 8 Adults (ages 13 and up)</p>
+                        <p><span class="font-semibold">Price:</span> $324.00</p>
+                    </div>
+                </div>
+                <div class="items-center px-4 py-3 space-x-2">
+                    <button id="copyBoatDetailsBtn" class="px-4 py-2 bg-indigo-500 text-white text-base font-medium rounded-md w-auto shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+                        Copy Details
+                    </button>
+                    <button id="closeBoatModalBtn" class="px-4 py-2 bg-gray-200 text-gray-800 text-base font-medium rounded-md w-auto shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        Close
+                    </button>
+                </div>
+                 <div id="copyBoatSuccess" class="text-sm text-green-600 mt-2 h-4"></div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         // This script handles the accordion functionality for the itinerary.
@@ -335,6 +486,152 @@
                     }
                 });
             });
+
+            // Cruise Modal functionality
+            const modal = document.getElementById('reservationModal');
+            const viewBtn = document.getElementById('viewReservationBtn');
+            const closeBtn = document.getElementById('closeModalBtn');
+            const copyBtn = document.getElementById('copyDetailsBtn');
+            const reservationDetails = document.getElementById('reservationDetails');
+            const copySuccessMsg = document.getElementById('copy-success');
+
+            if (viewBtn) {
+                viewBtn.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.add('hidden');
+                    copySuccessMsg.textContent = ''; // Clear message on close
+                });
+            }
+            
+            // Biking Modal Functionality
+            const bikingModal = document.getElementById('bikingReservationModal');
+            const viewBikingBtn = document.getElementById('viewBikingReservationBtn');
+            const closeBikingBtn = document.getElementById('closeBikingModalBtn');
+            const copyBikingBtn = document.getElementById('copyBikingDetailsBtn');
+            const bikingReservationDetails = document.getElementById('bikingReservationDetails');
+            const copyBikingSuccessMsg = document.getElementById('copyBikingSuccess');
+
+            if(viewBikingBtn) {
+                viewBikingBtn.addEventListener('click', () => {
+                    bikingModal.classList.remove('hidden');
+                });
+            }
+            
+            if(closeBikingBtn) {
+                closeBikingBtn.addEventListener('click', () => {
+                    bikingModal.classList.add('hidden');
+                    copyBikingSuccessMsg.textContent = '';
+                });
+            }
+            
+            // Spa Modal Functionality
+            const spaModal = document.getElementById('spaReservationModal');
+            const viewSpaBtn = document.getElementById('viewSpaReservationBtn');
+            const closeSpaBtn = document.getElementById('closeSpaModalBtn');
+            const copySpaBtn = document.getElementById('copySpaDetailsBtn');
+            const spaReservationDetails = document.getElementById('spaReservationDetails');
+            const copySpaSuccessMsg = document.getElementById('copySpaSuccess');
+
+            if(viewSpaBtn) {
+                viewSpaBtn.addEventListener('click', () => {
+                    spaModal.classList.remove('hidden');
+                });
+            }
+
+            if(closeSpaBtn) {
+                closeSpaBtn.addEventListener('click', () => {
+                    spaModal.classList.add('hidden');
+                    copySpaSuccessMsg.textContent = '';
+                });
+            }
+            
+            // Boat Modal Functionality
+            const boatModal = document.getElementById('boatReservationModal');
+            const viewBoatBtn = document.getElementById('viewBoatReservationBtn');
+            const closeBoatBtn = document.getElementById('closeBoatModalBtn');
+            const copyBoatBtn = document.getElementById('copyBoatDetailsBtn');
+            const boatReservationDetails = document.getElementById('boatReservationDetails');
+            const copyBoatSuccessMsg = document.getElementById('copyBoatSuccess');
+
+            if(viewBoatBtn) {
+                viewBoatBtn.addEventListener('click', () => {
+                    boatModal.classList.remove('hidden');
+                });
+            }
+            
+            if(closeBoatBtn) {
+                closeBoatBtn.addEventListener('click', () => {
+                    boatModal.classList.add('hidden');
+                    copyBoatSuccessMsg.textContent = '';
+                });
+            }
+
+
+            // Close modals if clicking outside of them
+            window.addEventListener('click', (event) => {
+                if (event.target == modal) {
+                    modal.classList.add('hidden');
+                    copySuccessMsg.textContent = '';
+                }
+                if (event.target == bikingModal) {
+                    bikingModal.classList.add('hidden');
+                    copyBikingSuccessMsg.textContent = '';
+                }
+                if (event.target == spaModal) {
+                    spaModal.classList.add('hidden');
+                    copySpaSuccessMsg.textContent = '';
+                }
+                if (event.target == boatModal) {
+                    boatModal.classList.add('hidden');
+                    copyBoatSuccessMsg.textContent = '';
+                }
+            });
+
+            function copyToClipboard(text, successElement) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    successElement.textContent = 'Copied to clipboard!';
+                    setTimeout(() => { successElement.textContent = ''; }, 2000);
+                } catch (err) {
+                    successElement.textContent = 'Failed to copy!';
+                    console.error('Fallback: Oops, unable to copy', err);
+                }
+                document.body.removeChild(textArea);
+            }
+
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    copyToClipboard(reservationDetails.innerText, copySuccessMsg);
+                });
+            }
+            
+            if (copyBikingBtn) {
+                copyBikingBtn.addEventListener('click', () => {
+                    copyToClipboard(bikingReservationDetails.innerText, copyBikingSuccessMsg);
+                });
+            }
+
+            if (copySpaBtn) {
+                copySpaBtn.addEventListener('click', () => {
+                    copyToClipboard(spaReservationDetails.innerText, copySpaSuccessMsg);
+                });
+            }
+            
+            if (copyBoatBtn) {
+                copyBoatBtn.addEventListener('click', () => {
+                    copyToClipboard(boatReservationDetails.innerText, copyBoatSuccessMsg);
+                });
+            }
         });
     </script>
 
